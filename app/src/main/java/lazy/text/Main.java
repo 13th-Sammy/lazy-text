@@ -8,7 +8,7 @@ public class Main {
         try(Connection conn=DBConnection.getConnection()) {
             System.out.println("Werks");
         } catch (SQLException | RuntimeException e) {
-            System.err.println("Could not connect to Supabase");
+            System.err.println("Could not connect to Supabase: "+e.getMessage());
         }
     }
 }
